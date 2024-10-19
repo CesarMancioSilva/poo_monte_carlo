@@ -30,19 +30,3 @@ def transform_data(data,type,**kwargs):
         case 'name_month':
             data_transformed = transformState.name_month(kwargs['column_name'])
             return data_transformed
-
-
-# class DataVisualization:
-#     def __init__(self,data):
-#         self.data=data
-#     def graph_bar(self,ordena):
-#         return 'Graph Bar'
-
-
-# def visualize_data(data,type,**kwargs):
-#     visualize_state = DataVisualization(data)
-#     match type:
-#         case 'bar': 
-#             visualize_state.graph_bar(kwargs['column_x'],kwargs['column_y'])
-#         case 'hist': print()
-#         case 'setor': print()

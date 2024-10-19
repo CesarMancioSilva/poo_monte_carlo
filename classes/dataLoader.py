@@ -12,4 +12,3 @@ class dataLoader:
             return self.data
         except Exception as error:
             print(f'Não foi possivel carregar os dados: {error}')
-    # def load_data_api(self):
