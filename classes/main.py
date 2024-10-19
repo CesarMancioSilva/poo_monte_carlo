@@ -24,6 +24,12 @@ def transform_data(data,type,**kwargs):
         case 'split_date':
             data_transformed = transformState.split_date(kwargs['format'],kwargs['name'])
             return data_transformed
+        case 'replace':
+            data_transformed = transformState.replace(kwargs['column'],kwargs['old'],kwargs['new'])
+            return data_transformed
+        case 'name_month':
+            data_transformed = transformState.name_month(kwargs['column_name'])
+            return data_transformed
 
 
 # class DataVisualization:

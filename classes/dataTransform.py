@@ -27,3 +27,15 @@ class DataTransform:
                 print(f'Formato yyyy/dd/mm da coluna "{name}" foi separado em mais colunas "Ano", "Mes" e "Dia" no Dataframe')
                 self.data[['Ano', 'Dia', 'Mes']] = self.data[name].str.split('-', expand=True)
                 return self.data
+    def name_month(self,column_name):
+        meses = {1: 'Janeiro', 2: 'Fevereiro', 3: 'Março', 4: 'Abril',
+        5: 'Maio', 6: 'Junho', 7: 'Julho', 8: 'Agosto',
+        9: 'Setembro', 10: 'Outubro', 11: 'Novembro', 12: 'Dezembro'}
+        self.data[column_name]=self.data[column_name].astype(int)
+        self.data["Mes Nome"] = self.data[column_name].map(meses)
+        print(f'Nova coluna criada "Mes Nome" com o nome dos meses')
+        return self.data
+    def replace(self,column,old,new):
+        print(f'Os termos {old} fora trocados por {new} no Dataframe')
+        self.data[column] = self.data[column].replace(old,new)
+        return self.data
