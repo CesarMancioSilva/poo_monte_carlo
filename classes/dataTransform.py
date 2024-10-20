@@ -36,6 +36,6 @@ class DataTransform:
         print(f'Nova coluna criada "Mes Nome" com o nome dos meses')
         return self.data
     def replace(self,column,old,new):
-        print(f'Os termos {old} fora trocados por {new} no Dataframe')
+        print(f'Os termos {old} foram trocados por {new} no Dataframe')
         self.data[column] = self.data[column].replace(old,new)
         return self.data
